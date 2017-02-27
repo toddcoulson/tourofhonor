@@ -1,0 +1,26 @@
+{
+  "name": "tourofhonor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o app/src/css app/src/scss"
+  },
+  "author": "Todd Coulson",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "browser-sync": "^2.18.6",
+    "eslint": "^3.14.0",
+    "node-sass": "^4.3.0",
+    "postcss-cli": "^2.6.0",
+    "uglify-js": "^2.7.5"
+  },
+  "dependencies": {
+    "emailjs": "^1.0.8",
+    "nodemailer": "^3.1.3"
+  }
+}
