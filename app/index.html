@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"  id="data-ng-app" data-ng-app="demo">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tour of Honor * Bucks County</title>
+
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="./src/css/main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
+        <link href="/bower_components/ideal-image-slider/ideal-image-slider.css" rel="stylesheet">
+        <link href="/bower_components/ideal-image-slider/themes/default/default.css" rel="stylesheet">
+        <link href="/bootstrap-photo-gallery/jquery.bsPhotoGallery.css" rel="stylesheet">
+    </head>
+    <body ng-controller="AllController">
+        <div class="holdAll">
+            <div class="left amFlag"><img src="./src/images/american-flag.jpg" class="amFlagImg" alt="amFlag left"/></div>
+            <div class="firstContain bringToFront">
+                <div class="container">
+                    <div class="row row-content">
+                        <div id="topBar" class="col-xs-12" ui-view="topBar">
+                            <img class="fixedCollage" src="./src/images/collage.png">
+                            <a class="navbar-brand" ui-sref="app">
+                                <img src="./src/images/logoResize.png"></a>
+
+                        </div>
+                        <div id="header" class="col-xs-12 " ui-view="header"></div>
+                        <div id="content" class="col-xs-12 col-sm-8" ui-view="content"></div>
+                        <div id="contentSecond" class="col-xs-12 col-sm-4" ui-view="events"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" ui-view="footer"></div>
+            <div class="right amFlag"><img src="./src/images/american-flag.jpg" class="amFlagImg amFlagFlip" alt="amFlag right"/>
+            </div>
+        </div>
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="/bootstrap-photo-gallery/jquery.bsPhotoGallery.js"></script>
+        <script src="../bower_components/ideal-image-slider/ideal-image-slider.min.js"></script>
+        <script src="../bower_components/ideal-image-slider/extensions/bullet-nav/iis-bullet-nav.js"></script>
+        <script src="./src/js/app.js"></script> 
+        <script src="./src/js/testimonialController.js"></script>
+        <script src="./src/js/eventsController.js"></script> 
+        <script src="./src/js/contactController.js"></script> 
+        <script src="./src/js/applicationController.js"></script>
+        <script src="./src/js/visualsController.js"></script> 
+        <script src="./src/js/boardController.js"></script>
+        <script src="./src/js/donateController.js"></script>
+        <script src="./src/js/showsDetailController.js"></script> 
+        <script src="./src/js/ShowsService.js"></script> 
+        <script src="./src/js/slideshow.js"></script>
+        
+    </body>
+</html>
