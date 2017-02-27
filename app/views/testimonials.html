@@ -1,0 +1,13 @@
+<div class="textBlock">
+    <p ng-init="randomTestimonial()" class="leadTitle largeText">BUCKS COUNTY TOUR OF HONOR</p>
+    <p class="leadTitle mediumText">Testimonials:</p>
+    <p ng-bind-html="testimonialValue.testimonial">
+        
+    </p>
+    <p>
+        {{testimonialValue.from}}
+    </p>
+    <p>
+        <button class="btn btn-default" ng-click="selectTestimonial()">Next Testimonial</button>
+    </p>
+</div>
