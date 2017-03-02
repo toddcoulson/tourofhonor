@@ -1,4 +1,12 @@
 <div class="textBlock">
-<p class="leadTitle largeText">BUCKS COUNTY TOUR OF HONOR</p>
-<p class="leadTitle mediumText">Events:</p>
+    <p class="leadTitle largeText">BUCKS COUNTY TOUR OF HONOR</p>
+    <p class="leadTitle mediumText">Events:</p>
+    <div ng-repeat="event in events" class="eventItem">
+        <div class="eventType">
+            {{event.eventType}}
+        </div>
+        <div class="eventDate">
+            {{event.date}}
+        </div>
+    </div>
 </div>

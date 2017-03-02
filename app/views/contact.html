@@ -20,7 +20,7 @@
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Your name (required)</label>  
+        <label class="col-md-4 control-label">Your name (required): </label>  
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -32,7 +32,7 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label">Your Email (required)</label>  
+        <label class="col-md-4 control-label">Your Email (required): </label>  
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -44,7 +44,7 @@
       <!-- Text input-->
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Subject</label>  
+        <label class="col-md-4 control-label">Subject: </label>  
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
@@ -56,7 +56,7 @@
       <!-- Text area -->
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Your Message</label>
+        <label class="col-md-4 control-label">Your Message: </label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
@@ -73,13 +73,24 @@
         <label class="col-md-4 control-label"></label>
         <div class="col-md-4">
           <button type="submit" ng-click="sendMail()" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
-          
+
         </div>
       </div>
 
     </fieldset>
   </form>
 
-  Follow Us
-  Facebook
+  <p class="leadTitle mediumText">
+    LIKE US AND SHARE ON FACEBOOK
+  </p>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=354488104919145";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="fb-like" data-href="https://www.facebook.com/Bucks-County-Tour-of-Honor-168668466861814/" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 </div>
