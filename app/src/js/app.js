@@ -86,7 +86,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         views: {
             'content@': {
                 templateUrl : 'views/sponsors.html',
-                controller  : 'SponsorsController'
+                controller  : 'SponsorController'
             }
         }
     })

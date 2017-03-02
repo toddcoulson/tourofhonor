@@ -12,7 +12,7 @@ app.controller('ContactController', ['$scope', function($scope) {
         $.get("http://localhost:8080/send",passData,function(data){
             if(data=="sent")
             {
-                $("#message").empty().html("Email is been sent at "+$scope.to+" . Please check inbox!");
+                $("#message").empty().html("Email has been sent at "+$scope.to+" . Please check inbox!");
             }
         });
 
