@@ -1,16 +1,18 @@
 
 var User = require('./models/user');
 var nodemailer = require("nodemailer");
+var xoauth2 = require('xoauth2');
 /*
     Here we are configuring our SMTP Server details.
     STMP is mail server which is responsible for sending and recieving email.
 */
 var smtpTransport = nodemailer.createTransport({
-	service: "gmail",
+	service: "Gmail",
 	host: "smtp.gmail.com",
 	auth: {
-		user: "tcoulson@gmail.com",
-		pass: "marathon9"
+		user: "buckscountytourofhonor@gmail.com",
+		pass: process.env.GMAIL_PASSWORD
+
 	}
 });
 module.exports = function(app, passport){
@@ -21,7 +23,7 @@ module.exports = function(app, passport){
 
 	app.get('/send',function(req,res){
 		var mailOptions={
-			to : 'tcoulson@gmail.com',
+			to : 'buckscountytourofhonor@gmail.com',
 			from: req.query.email,
 			subject : req.query.subject,
 			text : req.query.name +": "+req.query.message
@@ -40,23 +42,4 @@ module.exports = function(app, passport){
 
 
 
-	app.get('/profile', isLoggedIn, function(req, res){
-		res.render('profile.ejs', { user: req.user });
-	});
-
-
-	app.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
-
-	app.get('/auth/google/callback', 
-			passport.authenticate('google', { successRedirect: '/profile',
-											 failureRedirect: '/' }));
-
 };
-
-function isLoggedIn(req, res, next) {
-	if(req.isAuthenticated()){
-		return next();
-	}
-
-	res.redirect('/login');
-}
